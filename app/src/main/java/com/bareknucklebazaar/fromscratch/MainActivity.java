@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -17,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
     public void showKnucks (View view){
         //show a random knucks
         TextView knucksDisplay = (TextView) findViewById(R.id.knucks_display);
-        String randomKnucks = "Punk Cats";
-        knucksDisplay.setText(randomKnucks);
+        String [] randomKnucks = {"Punk Cats", "Funk Bats", "RLRR LRLL"};
+        String random = (randomKnucks[new Random().nextInt(randomKnucks.length)]);
+        knucksDisplay.setText(random);
     }
 }
