@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -10,8 +11,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.bareknucklebazaar.fromscratch.MainActivity">
 
-    <TextView
+    <TextView android:id="@+id/knucks_display"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/knucks_default_display"/>
+
+    <Button android:id="@+id/display_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:hint="@string/button_text"
+        android:onClick="showKnucks"/>
+</LinearLayout>

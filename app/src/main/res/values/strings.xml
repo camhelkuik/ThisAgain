@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FromScratch</string>
+    <string name="knucks_default_display">Your Knucks Here</string>
+    <string name="button_text">Show me my Knucks!</string>
 </resources>
